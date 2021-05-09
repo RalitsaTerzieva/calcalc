@@ -63,19 +63,35 @@ class Calculator extends Component {
     }
 
     render() {
-        return <div>
+        return <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Per 100g</th>
+                    <th>Grams</th>
+                    <th>Total</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
             {this.state.items.map((item, index) => (
-                <div key={`row-${index}`}>
-                    <input type="text" name="ingredient" placeholder="ingredient" autoComplete='off' value={item.ingredient} onChange={e => this.handleInputChange(e, index)} />
-                    <input type="text" name='per_100g' placeholder="per 100g" autoComplete='off' value={item.per_100g} onChange={e => this.handleInputChange(e, index)} />
-                    <input type="text" name="grams" placeholder="grams" autoComplete='off' value={item.grams} onChange={e => this.handleInputChange(e, index)} />
-                    <input type="text" name="total" placeholder="0" readOnly value={item.total} />
-                    <input type="button" value="+" onClick={this.addItem} />
-                    <input type="button" value="-" onClick={e => (this.removeItem(index))} />
-                </div>
+                <tr key={`row-${index}`}>
+                    <td><input type="text" name="ingredient" placeholder="ingredient" autoComplete='off' value={item.ingredient} onChange={e => this.handleInputChange(e, index)} onFocus={e => e.target.select()} /></td>
+                    <td><input type="number" name='per_100g' placeholder="per 100g" autoComplete='off' value={item.per_100g} onChange={e => this.handleInputChange(e, index)} onFocus={e => e.target.select()} /></td>
+                    <td><input type="number" name="grams" placeholder="grams" autoComplete='off' value={item.grams} onChange={e => this.handleInputChange(e, index)}  onFocus={e => e.target.select()} /></td>
+                    <td><input type="text" name="total" placeholder="0" readOnly value={item.total.toFixed(2)} /></td>
+                    <td><input type="button" value="+" onClick={this.addItem} /></td>
+                    <td><input type="button" value="-" onClick={e => (this.removeItem(index))} /></td>
+                </tr>
             ))}
-            <div>Total: {this.state.total.toFixed(2)}</div>
-        </div>
+                <tr>
+                    <td colSpan="3"></td>
+                    <td>Total: {this.state.total.toFixed(2)}</td>
+                    <td colSpan="2"></td>
+                </tr>
+            </tbody>
+        </table>
     }
 }
 
