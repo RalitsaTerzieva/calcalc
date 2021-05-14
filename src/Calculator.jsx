@@ -85,12 +85,15 @@ class Calculator extends Component {
                     <td><input type="button" value="-" onClick={e => (this.removeItem(index))} /></td>
                 </tr>
             ))}
+
+            </tbody>
+            <tfoot>
                 <tr>
                     <td colSpan="3"></td>
                     <td>Total: {this.state.total.toFixed(2)}</td>
                     <td colSpan="2"></td>
                 </tr>
-            </tbody>
+            </tfoot>
         </table>
     }
 }
