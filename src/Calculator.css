@@ -5,3 +5,9 @@ thead {
 input {
     background-color: bisque;
 }
+
+.calculator-table {
+    padding-top: 35vh;
+    padding-left: 20vw;
+    display: block;
+}
