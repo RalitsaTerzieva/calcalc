@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Calculator.css';
+import { FaWeightHanging, FaWeight } from "react-icons/fa";
+import { IoFastFood } from "react-icons/Io";
 
 class Calculator extends Component {
     constructor(props) {
@@ -67,9 +69,9 @@ class Calculator extends Component {
         return <table className="calculator-table">
             <thead>
                 <tr>
-                    <th>Ingredient</th>
-                    <th>Per 100g</th>
-                    <th>Grams</th>
+                    <th><IoFastFood /> Ingredient</th>
+                    <th><FaWeightHanging /> Per 100g</th>
+                    <th><FaWeight /> Grams</th>
                     <th>Total</th>
                     <th></th>
                     <th></th>
