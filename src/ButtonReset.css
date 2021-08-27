@@ -2,6 +2,8 @@ button {
     background-color: #b67ec4;
     border-radius: 8px;
     border: none;
-    width: 90px;
+    width: 100px;
+    font-size: 12px;
     height: 40px;
+    margin: 30px;
 }
