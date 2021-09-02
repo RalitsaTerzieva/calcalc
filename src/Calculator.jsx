@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Calculator.css';
 import { FaWeightHanging, FaWeight } from "react-icons/fa";
-import { IoFastFood } from "react-icons/Io";
-
+import { IoFastFood } from "react-icons/io5"
 class Calculator extends Component {
     constructor(props) {
         super(props);
