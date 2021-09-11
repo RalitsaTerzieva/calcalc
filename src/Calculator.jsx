@@ -71,9 +71,8 @@ class Calculator extends Component {
                     <th><IoFastFood /> Ingredient</th>
                     <th><FaWeightHanging /> Per 100g</th>
                     <th><FaWeight /> Grams</th>
-                    <th>Total</th>
-                    <th><FaCalculator /></th>
-                    <th></th>
+                    <th><FaCalculator /> Total</th>
+                    <th colspan="2"></th>
                 </tr>
             </thead>
             <tbody>
