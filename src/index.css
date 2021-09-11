@@ -9,6 +9,16 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+th {
+    padding: 9px;
+}
+
+
+input {
+    padding-top: 3px;
+    padding-bottom: 3px;
+} 
+
 
 /* Chrome, Safari, Edge, Opera */
 
